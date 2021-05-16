@@ -28,12 +28,12 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if(resultCode == RESULT_OK){
-            if(requestCode == 1){
+        if (resultCode == RESULT_OK) {
+            if (requestCode == 1) {
                 val bundle = data?.extras
-                if(bundle != null){
+                if (bundle != null) {
                     val resultado = bundle.getString("Resultado1")
-                    Toast.makeText(this,resultado,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, resultado, Toast.LENGTH_SHORT).show()
                 }
             }
         }
