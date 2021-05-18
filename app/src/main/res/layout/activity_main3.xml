@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8A8484"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp"
@@ -12,13 +13,17 @@
         android:id="@+id/ValorA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Valor A" />
+        android:hint="Valor A"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/ValorB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Valor B" />
+        android:hint="Valor B"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/txtTexto"

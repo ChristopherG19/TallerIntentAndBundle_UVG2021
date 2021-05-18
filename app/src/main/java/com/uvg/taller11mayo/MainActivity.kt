@@ -32,18 +32,9 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intent, 1)
         }
 
-        btnOpeD.setOnClickListener {
+        btnOpeM.setOnClickListener {
             val intent: Intent = Intent(this, MainActivity4Multiplicacion::class.java)
             startActivityForResult(intent, 1)
-            /*
-            Realizado en clase:
-
-            intent.putExtra("valor", "Hola mundo")
-            intent.putExtra("valor2", "Prueba")
-            intent.putExtra("valor3", "Si hay valor")
-            startActivity(intent)
-            finish()
-            */
         }
 
         btnOpeD.setOnClickListener{
@@ -60,7 +51,7 @@ class MainActivity : AppCompatActivity() {
             if (requestCode == 1) {
                 val bundle = data?.extras
                 if (bundle != null) {
-                    val resultado = bundle.getString("Resultado1")
+                    val resultado = bundle.getString("Resultado")
                     TextResultado.text = resultado
                 }
             }

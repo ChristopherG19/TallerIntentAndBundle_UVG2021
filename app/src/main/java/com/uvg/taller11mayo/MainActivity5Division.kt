@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main2.*
 
 class MainActivity5Division : AppCompatActivity() {
@@ -13,19 +14,24 @@ class MainActivity5Division : AppCompatActivity() {
 
         btnRegresar.setOnClickListener {
 
-            val Num1Text: EditText = ValorA
-            val Num2Text: EditText = ValorB
+            val num1Text: EditText = ValorA
+            val num2Text: EditText = ValorB
 
-            val Num1Num: Float = Num1Text.toString().toFloat()
-            val Num2Num: Float = Num2Text.toString().toFloat()
+            if(num1Text.text.isEmpty() || num2Text.text.isEmpty()) {
+                Toast.makeText(this, "Se deben de llenar todos los campos", Toast.LENGTH_SHORT).show()
+            } else {
+                val num1Num: Float = num1Text.text.toString().toFloat()
+                val num2Num: Float = num2Text.text.toString().toFloat()
 
-            val Division: Float = Num1Num / Num2Num
-            val ResultadoDivision: String = Division.toString()
+                val division: Float = num1Num / num2Num
+                val resultadoDivision: String = division.toString()
 
-            val intent: Intent = Intent()
-            intent.putExtra("Resultado", ResultadoDivision)
-            setResult(RESULT_OK, intent)
-            finish()
+                val intent: Intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("Resultado", resultadoDivision)
+                setResult(RESULT_OK, intent)
+                finish()
+            }
+
         }
 
     }
