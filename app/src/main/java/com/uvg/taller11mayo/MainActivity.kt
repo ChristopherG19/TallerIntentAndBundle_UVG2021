@@ -3,7 +3,9 @@ package com.uvg.taller11mayo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
@@ -40,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         btnOpeD.setOnClickListener{
             val intent: Intent = Intent(this, MainActivity5Division::class.java)
             startActivityForResult(intent, 1)
+        }
+
+        Salida.setOnClickListener{
+            exitProcess(0)
         }
 
     }
