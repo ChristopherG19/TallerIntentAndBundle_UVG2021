@@ -29,8 +29,8 @@
     <Button
         android:id="@+id/btnRegresar"
         android:layout_width="match_parent"
-        android:backgroundTint="#6BB536"
+        android:backgroundTint="#BF2424"
         android:layout_height="wrap_content"
-        android:text="Sumar y Regresar" />
+        android:text="Multiplicar y Regresar" />
 
 </LinearLayout>
